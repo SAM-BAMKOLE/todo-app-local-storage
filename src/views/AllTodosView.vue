@@ -6,5 +6,5 @@ const todos = useTodosStore()
 </script>
 <template>
     <HeaderComponent header="All Todos" />
-    <TodoList :current-show="todos.todos" />
+    <TodoList :current-show="todos.todos" no-content="You do not have any schedule yet." />
 </template>

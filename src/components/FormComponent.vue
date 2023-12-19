@@ -55,7 +55,7 @@ function submitHandler() {
             <input
                 type="datetime-local"
                 name="time"
-                class="input input-bordered input-secondary"
+                class="input input-bordered input-secondary w-full"
                 v-model="formValue.time"
             />
         </div>

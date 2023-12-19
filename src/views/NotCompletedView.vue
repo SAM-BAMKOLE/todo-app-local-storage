@@ -6,5 +6,8 @@ const todos = useTodosStore()
 </script>
 <template>
     <HeaderComponent header="Uncompleted Todos" />
-    <TodoList :current-show="todos.notCompletedTodo()" />
+    <TodoList
+        :current-show="todos.notCompletedTodo()"
+        no-content="You do not have any uncompleted schedule."
+    />
 </template>

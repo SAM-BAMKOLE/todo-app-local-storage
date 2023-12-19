@@ -13,5 +13,6 @@ const todos = useTodosStore()
     <TodoList
         :header-title="'Latest Todos (' + todos.latestTodos.length.toString() + ')'"
         :current-show="todos.latestTodos"
+        no-content="You do not have any schedule yet."
     />
 </template>

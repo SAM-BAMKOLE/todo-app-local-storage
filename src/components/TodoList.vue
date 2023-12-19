@@ -10,12 +10,19 @@ defineProps({
     headerTitle: {
         type: String,
         required: false
+    },
+    noContent: {
+        type: String,
+        required: false
     }
 })
 </script>
 <template>
     <main class="w-full px-5 py-10">
         <h2 class="font-semibold text-center text-3xl md:text-4xl mb-5">{{ headerTitle }}</h2>
+        <p v-if="currentShow.length === 0" class="text-center text-black/70 text-md font-medium">
+            {{ noContent }}
+        </p>
         <ul class="w-full max-w-4xl space-y-3 mx-auto">
             <li
                 v-for="todo in currentShow.slice().reverse()"
@@ -39,7 +46,7 @@ defineProps({
                 </div>
                 <div class="flex flex-col md:items-center md:flex-row gap-1 md:gap-3">
                     <button
-                        class="font-bold rounded-full w-6 md:w-8 aspect-square text-sm text-center align-center bg-primary/60"
+                        class="font-bold rounded-full w-6 md:w-8 aspect-square text-sm text-center align-center bg-sky-500"
                         @click="todos.toggleCompleted(todo.id)"
                     >
                         &check;
